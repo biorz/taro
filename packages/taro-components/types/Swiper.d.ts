@@ -28,6 +28,8 @@ interface SwiperProps extends StandardProps {
   current?: number
   /** 当前所在滑块的 item-id ，不能与 current 被同时指定
    * @default ""
+   * @supported swan, tt, qq, jd
+   * @weapp deprecated
    */
   currentItemId?: string
   /** 自动切换时间间隔
@@ -213,7 +215,7 @@ declare namespace SwiperProps {
 /** 滑块视图容器。其中只可放置 swiper-item 组件，否则会导致未定义的行为。
  * > 不要为 `SwiperItem` 设置 **style** 属性，可以通过 class 设置样式。[7147](https://github.com/NervJS/taro/issues/7147)
  * @classification viewContainer
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * class App extends Component {

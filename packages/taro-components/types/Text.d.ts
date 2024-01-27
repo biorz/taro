@@ -25,6 +25,10 @@ interface TextProps extends StandardProps {
    * @supported alipay
    */
   numberOfLines?: number
+  /** 限制文本最大行数
+   * @supported weapp
+   */
+  maxLines?: number
 }
 declare namespace TextProps {
   /** space 的合法值 */
@@ -39,7 +43,7 @@ declare namespace TextProps {
 }
 /** 文本
  * @classification base
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class PageView extends Component {

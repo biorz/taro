@@ -5,6 +5,11 @@ interface TextareaProps extends StandardProps, FormItemProps {
    * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
    */
   value?: string
+  /** 设置 React 非受控输入框的初始内容
+   * @supported h5, rn, weapp, alipay, swan, tt, qq, jd, h5, rn, harmony_hybrid
+   * @unique
+   */
+  defaultValue?: string
   /** 输入框为空时占位符
    * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
    */
@@ -99,7 +104,7 @@ interface TextareaProps extends StandardProps, FormItemProps {
   /** 点击键盘右下角按钮时是否保持键盘不收起
    * @supported weapp, swan, tt
    */
-  confirmHold?: string
+  confirmHold?: boolean
   /** 组件名字，用于表单提交获取数据。
    * @supported alipay
    */
@@ -146,7 +151,7 @@ interface TextareaProps extends StandardProps, FormItemProps {
    */
   onConfirm?: CommonEventFunction<TextareaProps.onConfirmEventDetail>
   /** 键盘高度发生变化的时候触发此事件
-   * @supported weapp
+   * @supported weapp, tt
    */
   onKeyboardHeightChange?: CommonEventFunction<TextareaProps.onKeyboardHeightChangeEventDetail>
 }
@@ -189,7 +194,7 @@ declare namespace TextareaProps {
 }
 /** 多行输入框。该组件是原生组件，使用时请注意相关限制
  * @classification forms
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class PageView extends Component {
